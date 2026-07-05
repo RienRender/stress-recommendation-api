@@ -1,0 +1,6 @@
+context_features:
+  - stress_score
+  - energy_level
+  - available_time
+  - social_preference
+  - mindfulness_preference

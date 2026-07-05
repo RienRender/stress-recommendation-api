@@ -1,0 +1,4 @@
+algorithm: linucb
+alpha: 0.3
+num_arms: 50
+context_dimension: 12

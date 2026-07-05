@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A wellness and stress relief application.">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="flowerbloomclaude">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>flowerbloomclaude</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      background-color: #F8FAF8; /* Matches your AppColors.bg */
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: "$FLUTTER_SERVICE_WORKER_VERSION",
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine({
+            // 🚀 THE FIX: Force CanvasKit for accurate Emojis and fonts
+            renderer: "canvaskit", 
+          }).then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <script src="flutter_service_worker.js?v=$FLUTTER_SERVICE_WORKER_VERSION"></script>
+  <script src="main.dart.js" type="application/javascript"></script>
+</body>
+</html>
